@@ -62,25 +62,27 @@ begin
     T=new(nyear,float)
     E=new(nyear,float)
 
+    C(0) = C0
+    T(0) = T0
+
     C=285.
     T=0.
     s=3. ;;K
   ;;; for E=0.
     E=0.
   
-   do iyr=0,nyear-1
+   do iyr=1,nyear-1
 
-;    dT = s/log(2)*log(C(iyr)/C0) + T_dtrend(iyr)
-;    C(iyr) = C0 + (E(iyr) - gam * dT)/(1 + beta)
- 
+    T(iyr) = T0 + s/log(2)*log(C(iyr-1)/C0) + T_dtrend(iyr) 
+
     C(iyr) = C0 + (E(iyr) - gam * (T(iyr)-T0))/(1 + beta)
 
     T(iyr) = T0 + s/log(2)*log(C(iyr)/C0) + T_dtrend(iyr)
 
    end do
 
-    print(C)
-    print(T)
+  ;  print(C)
+  ;  print(T)
 
     C_nat=C
     T_nat=T
@@ -88,10 +90,9 @@ begin
   ;;; for E=data_CO2E
     E=data_CO2E
 
-   do iyr=0,nyear-1
+   do iyr=1,nyear-1
 
-;    dT = s/log(2)*log(C(iyr)/C0) + T_dtrend(iyr)
-;    C(iyr) = C0 + (E(iyr) - gam * dT)/(1 + beta)
+    T(iyr) = T0 + s/log(2)*log(C(iyr-1)/C0) + T_dtrend(iyr)
 
     C(iyr) = C0 + (E(iyr) - gam * (T(iyr)-T0))/(1 + beta)
 
@@ -99,8 +100,8 @@ begin
 
    end do
 
-    print(C)
-    print(T)
+;    print(C)
+;    print(T)
 
     C_hum=C
     T_hum=T
@@ -114,10 +115,9 @@ begin
   ;;; for E=0.
     E=0.
 
-   do iyr=0,nyear-1
+   do iyr=1,nyear-1
 
-;    dT = s/log(2)*log(C(iyr)/C0) + T_dtrend(iyr)
-;    C(iyr) = C0 + (E(iyr) - gam * dT)/(1 + beta)
+    T(iyr) = T0 + s/log(2)*log(C(iyr-1)/C0) + T_dtrend(iyr)
 
     C(iyr) = C0 + (E(iyr) - gam * (T(iyr)-T0))/(1 + beta)
 
@@ -125,8 +125,8 @@ begin
 
    end do
 
-    print(C)
-    print(T)
+;    print(C)
+;    print(T)
 
     C_nat_up=C
     T_nat_up=T
@@ -134,10 +134,9 @@ begin
   ;;; for E=data_CO2E
     E=data_CO2E
 
-   do iyr=0,nyear-1
+   do iyr=1,nyear-1
 
-;    dT = s/log(2)*log(C(iyr)/C0) + T_dtrend(iyr)
-;    C(iyr) = C0 + (E(iyr) - gam * dT)/(1 + beta)
+    T(iyr) = T0 + s/log(2)*log(C(iyr-1)/C0) + T_dtrend(iyr)
 
     C(iyr) = C0 + (E(iyr) - gam * (T(iyr)-T0))/(1 + beta)
 
@@ -145,8 +144,8 @@ begin
 
    end do
 
-    print(C)
-    print(T)
+;    print(C)
+;    print(T)
 
     C_hum_up=C
     T_hum_up=T
@@ -160,10 +159,9 @@ begin
   ;;; for E=0.
     E=0.
 
-   do iyr=0,nyear-1
+   do iyr=1,nyear-1
 
-;    dT = s/log(2)*log(C(iyr)/C0) + T_dtrend(iyr)
-;    C(iyr) = C0 + (E(iyr) - gam * dT)/(1 + beta)
+    T(iyr) = T0 + s/log(2)*log(C(iyr-1)/C0) + T_dtrend(iyr)
 
     C(iyr) = C0 + (E(iyr) - gam * (T(iyr)-T0))/(1 + beta)
 
@@ -171,8 +169,8 @@ begin
 
    end do
 
-    print(C)
-    print(T)
+;    print(C)
+;    print(T)
 
     C_nat_dw=C
     T_nat_dw=T
@@ -180,10 +178,9 @@ begin
   ;;; for E=data_CO2E
     E=data_CO2E
 
-   do iyr=0,nyear-1
+   do iyr=1,nyear-1
 
-;    dT = s/log(2)*log(C(iyr)/C0) + T_dtrend(iyr)
-;    C(iyr) = C0 + (E(iyr) - gam * dT)/(1 + beta)
+    T(iyr) = T0 + s/log(2)*log(C(iyr-1)/C0) + T_dtrend(iyr)
 
     C(iyr) = C0 + (E(iyr) - gam * (T(iyr)-T0))/(1 + beta)
 
@@ -191,8 +188,8 @@ begin
 
    end do
 
-    print(C)
-    print(T)
+;    print(C)
+;    print(T)
 
     C_hum_dw=C
     T_hum_dw=T
@@ -206,8 +203,6 @@ begin
     asciiwrite("Predicted_annual_CO2_dw_over_1850-2017_using_CO2_emissions_by_box_model.txt",C_hum_dw)
     asciiwrite("Predicted_annual_T_up_over_1850-2017_using_CO2_emissions_by_box_model.txt",T_hum_up)
     asciiwrite("Predicted_annual_T_dw_over_1850-2017_using_CO2_emissions_by_box_model.txt",T_hum_dw)
-
-
 
     system("rm -rf Annual_CO2_and_T_with_s_beta_and_gamma_CO2E_using_box_model_from_1850-2017.nc")
     fout=addfile("Annual_CO2_and_T_with_s_beta_and_gamma_CO2E_using_box_model_from_1850-2017.nc","c")
@@ -226,6 +221,29 @@ begin
     fout->CO2_hum_dw=C_hum_dw
     fout->T_hum_dw=T_hum_dw
 
+;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;
+
+    NSE_C_hum_obs=1-sum((C_hum-data_CO2)^2)/sum((data_CO2-avg(data_CO2))^2)
+    NSE_T_hum_obs=1-sum((T_hum-data_T)^2)/sum((data_T-avg(data_T))^2)
+    print(NSE_C_hum_obs)
+    print(NSE_T_hum_obs) 
+
+    r_C_hum_obs=escorc(C_hum,data_CO2)
+    r_T_hum_obs=escorc(T_hum,data_T)
+
+    R2_C_hum_obs=r_C_hum_obs^2
+    R2_T_hum_obs=r_T_hum_obs^2
+
+     print(R2_C_hum_obs)
+     print(R2_T_hum_obs)
+
+     nobs=nyear
+
+     RMSE_C_hum_obs= sqrt(sum((C_hum-data_CO2)^2)/nobs)
+     RMSE_T_hum_obs= sqrt(sum((T_hum-data_T)^2)/nobs)
+
+    print(RMSE_C_hum_obs)
+    print(RMSE_T_hum_obs)
 ;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;
  ;;;plot
     wks = gsn_open_wks("pdf","plot_timeseries_of_CO2E_CO2_T_using_box_model_over_1850-2017_V1")
