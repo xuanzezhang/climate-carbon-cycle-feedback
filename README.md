@@ -1,7 +1,6 @@
 # climate-carbon-cycle-feedback
 
-https://zenodo.org/badge/4575812.svg
-Code citation: https://doi.org/10.5281/zenodo.4575812
+Code release: https://doi.org/10.5281/zenodo.4575812
 
 This is the original code and results for the paper:
 
