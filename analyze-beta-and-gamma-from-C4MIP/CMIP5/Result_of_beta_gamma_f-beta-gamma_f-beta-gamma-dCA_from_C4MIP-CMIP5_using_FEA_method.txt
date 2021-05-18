@@ -1,0 +1,215 @@
+ Copyright (C) 1995-2019 - All Rights Reserved
+ University Corporation for Atmospheric Research
+ NCAR Command Language Version 6.6.2
+ The use of this software is governed by a License Agreement.
+ See http://www.ncl.ucar.edu/ for more details.
+
+
+Variable: beta_model
+Type: float
+Total Size: 36 bytes
+            9 values
+Number of Dimensions: 1
+Dimensions and sizes:	[9]
+Coordinates: 
+Number Of Attributes: 1
+  _FillValue :	9.96921e+36
+(0)	2.056213
+(1)	1.65768
+(2)	0.9634211
+(3)	1.923457
+(4)	2.056213
+(5)	1.549155
+(6)	2.298793
+(7)	1.109658
+(8)	1.741193
+
+
+Variable: beta_model_avg
+Type: float
+Total Size: 4 bytes
+            1 values
+Number of Dimensions: 1
+Dimensions and sizes:	[1]
+Coordinates: 
+Number Of Attributes: 1
+  _FillValue :	9.96921e+36
+(0)	1.706198
+
+
+Variable: beta_model_std
+Type: float
+Total Size: 4 bytes
+            1 values
+Number of Dimensions: 1
+Dimensions and sizes:	[1]
+Coordinates: 
+(0)	0.4442987
+
+
+Variable: gamma_model
+Type: float
+Total Size: 36 bytes
+            9 values
+Number of Dimensions: 1
+Dimensions and sizes:	[9]
+Coordinates: 
+Number Of Attributes: 1
+  _FillValue :	9.96921e+36
+(0)	-86.22438
+(1)	-78.81946
+(2)	-23.77102
+(3)	-44.04043
+(4)	-65.12829
+(5)	-100.1444
+(6)	-88.08873
+(7)	-14.08136
+(8)	-85.44205
+
+
+Variable: gamma_model_avg
+Type: float
+Total Size: 4 bytes
+            1 values
+Number of Dimensions: 1
+Dimensions and sizes:	[1]
+Coordinates: 
+Number Of Attributes: 1
+  _FillValue :	9.96921e+36
+(0)	-65.08224
+
+
+Variable: gamma_model_std
+Type: float
+Total Size: 4 bytes
+            1 values
+Number of Dimensions: 1
+Dimensions and sizes:	[1]
+Coordinates: 
+(0)	30.73952
+
+
+Variable: gamma_COU_BIO_model
+Type: float
+Total Size: 36 bytes
+            9 values
+Number of Dimensions: 1
+Dimensions and sizes:	[9]
+Coordinates: 
+Number Of Attributes: 1
+  _FillValue :	9.96921e+36
+(0)	-89.94593
+(1)	-75.75005
+(2)	-17.27074
+(3)	-63.34572
+(4)	-63.06458
+(5)	-104.1482
+(6)	-102.3771
+(7)	-21.68795
+(8)	-93.67439
+
+
+Variable: gamma_COU_BIO_model_avg
+Type: float
+Total Size: 4 bytes
+            1 values
+Number of Dimensions: 1
+Dimensions and sizes:	[1]
+Coordinates: 
+Number Of Attributes: 1
+  _FillValue :	9.96921e+36
+(0)	-70.14051
+
+
+Variable: gamma_COU_BIO_model_std
+Type: float
+Total Size: 4 bytes
+            1 values
+Number of Dimensions: 1
+Dimensions and sizes:	[1]
+Coordinates: 
+(0)	32.42758
+
+
+Variable: fbg_model
+Type: float
+Total Size: 36 bytes
+            9 values
+Number of Dimensions: 1
+Dimensions and sizes:	[9]
+Coordinates: 
+Number Of Attributes: 1
+  _FillValue :	9.96921e+36
+(0)	-11.35463
+(1)	0.7538364
+(2)	5.894995
+(3)	-33.56716
+(4)	-7.146912
+(5)	-7.406486
+(6)	-22.19442
+(7)	-11.40967
+(8)	-14.6047
+
+
+Variable: fbg_model_avg
+Type: float
+Total Size: 4 bytes
+            1 values
+Number of Dimensions: 1
+Dimensions and sizes:	[1]
+Coordinates: 
+Number Of Attributes: 1
+  _FillValue :	9.96921e+36
+(0)	-11.22613
+
+
+Variable: fbg_model_std
+Type: float
+Total Size: 4 bytes
+            1 values
+Number of Dimensions: 1
+Dimensions and sizes:	[1]
+Coordinates: 
+(0)	11.71949
+
+
+Variable: fbg_dCA_model
+Type: float
+Total Size: 36 bytes
+            9 values
+Number of Dimensions: 1
+Dimensions and sizes:	[9]
+Coordinates: 
+Number Of Attributes: 1
+  _FillValue :	9.96921e+36
+(0)	-9.709345
+(1)	0.6441909
+(2)	5.038307
+(3)	-28.70798
+(4)	-6.077019
+(5)	-6.299809
+(6)	-18.98155
+(7)	-9.75584
+(8)	-12.59364
+
+
+Variable: fbg_dCA_model_avg
+Type: float
+Total Size: 4 bytes
+            1 values
+Number of Dimensions: 1
+Dimensions and sizes:	[1]
+Coordinates: 
+Number Of Attributes: 1
+  _FillValue :	9.96921e+36
+(0)	-9.604742
+
+
+Variable: fbg_dCA_model_std
+Type: float
+Total Size: 4 bytes
+            1 values
+Number of Dimensions: 1
+Dimensions and sizes:	[1]
+Coordinates: 
+(0)	10.02904
