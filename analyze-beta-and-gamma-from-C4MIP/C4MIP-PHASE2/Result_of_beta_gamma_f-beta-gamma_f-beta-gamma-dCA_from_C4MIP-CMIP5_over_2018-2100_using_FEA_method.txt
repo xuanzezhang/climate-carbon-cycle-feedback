@@ -1,0 +1,93 @@
+ Copyright (C) 1995-2019 - All Rights Reserved
+ University Corporation for Atmospheric Research
+ NCAR Command Language Version 6.6.2
+ The use of this software is governed by a License Agreement.
+ See http://www.ncl.ucar.edu/ for more details.
+
+
+Variable: beta_model
+Type: float
+Total Size: 44 bytes
+            11 values
+Number of Dimensions: 1
+Dimensions and sizes:	[11]
+Coordinates: 
+Number Of Attributes: 1
+  _FillValue :	9.96921e+36
+(0)	2.784287
+(1)	1.870005
+(2)	1.8693
+(3)	2.16223
+(4)	1.945919
+(5)	3.189275
+(6)	2.112633
+(7)	3.551289
+(8)	2.296694
+(9)	1.733019
+(10)	2.049326
+
+
+Variable: beta_model_avg
+Type: float
+Total Size: 4 bytes
+            1 values
+Number of Dimensions: 1
+Dimensions and sizes:	[1]
+Coordinates: 
+Number Of Attributes: 1
+  _FillValue :	9.96921e+36
+(0)	2.323998
+
+
+Variable: beta_model_std
+Type: float
+Total Size: 4 bytes
+            1 values
+Number of Dimensions: 1
+Dimensions and sizes:	[1]
+Coordinates: 
+(0)	0.5932038
+
+
+Variable: gamma_model
+Type: float
+Total Size: 44 bytes
+            11 values
+Number of Dimensions: 1
+Dimensions and sizes:	[11]
+Coordinates: 
+Number Of Attributes: 1
+  _FillValue :	9.96921e+36
+(0)	-70.80148
+(1)	-24.05008
+(2)	-50.22917
+(3)	-91.24262
+(4)	-132.6284
+(5)	-72.5256
+(6)	-22.20823
+(7)	-37.03801
+(8)	-46.73592
+(9)	-58.49463
+(10)	-79.00923
+
+
+Variable: gamma_model_avg
+Type: float
+Total Size: 4 bytes
+            1 values
+Number of Dimensions: 1
+Dimensions and sizes:	[1]
+Coordinates: 
+Number Of Attributes: 1
+  _FillValue :	9.96921e+36
+(0)	-62.2694
+
+
+Variable: gamma_model_std
+Type: float
+Total Size: 4 bytes
+            1 values
+Number of Dimensions: 1
+Dimensions and sizes:	[1]
+Coordinates: 
+(0)	32.17264
